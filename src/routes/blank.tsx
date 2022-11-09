@@ -4,28 +4,15 @@ export default function BlankPage() {
     return (
         <main class="text-center mx-auto ">
             <h1 >
-                Not Found
+                Empty
             </h1>
-            <p class="mt-8">
-                Visit{" "}
-                <a
-                    href="https://solidjs.com"
-                    target="_blank"
-                    class="text-sky-600 hover:underline"
-                >
-                    solidjs.com
-                </a>{" "}
-                to learn how to build Solid apps.
-            </p>
-            <p class="my-4">
-                <A href="/" class="text-sky-600 hover:underline">
-                    Home
-                </A>
-                {" - "}
-                <A href="/about" class="text-sky-600 hover:underline">
-                    About Page
-                </A>
-            </p>
+
+            <h2>Still blank</h2>
+
+            <div>
+                nothing to see here
+            </div>
+
         </main>
     );
 }
