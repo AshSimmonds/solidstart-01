@@ -25,10 +25,14 @@ export default function Root() {
             <Body>
                 <Suspense>
                     <ErrorBoundary>
-                        <A class="mr-2" href="/">
-                            Index
-                        </A>
-                        <A href="/about">About</A>
+                        <div class="flex gap-4" >
+                            <A href="/">
+                                Index
+                            </A>
+                            <A href="/about">About</A>
+                            <A href="/blank">Blank</A>
+                        </div>
+
                         <Routes>
                             <FileRoutes />
                         </Routes>
