@@ -1,3 +1,148 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #020013;
+}
+
+body,
+.prose body,
+.prose {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+}
+
+.prose h1,
+h1 {
+  font-size: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+.prose h2,
+h2 {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose h3,
+h3 {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose h4,
+h4 {
+  font-size: 1.15rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose h5,
+h5 {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose h6,
+h6 {
+  font-size: 1.05rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+/* Tailwind makes ALL THE BUTTONS UPPER CASE PLS STAHP */
+.btn {
+  text-transform: initial;
+}
+
+.btn-scifi {
+  --curve-size: 2.5em;
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, .6); */
+
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
+
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  ) !important;
+}
+
+.btn-xcom {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 30px) 0,
+    100% 30px,
+    100% 100%,
+    30px 100%,
+    0 calc(100% - 30px)
+  );
+  /* background-color: teal !important; */
+  /* --tw- */
+}
+
+.badge {
+  padding: 0.75rem;
+  padding-bottom: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.none {
+  all: initial !important;
+  color: #aaaaaa !important;
+}
+
+/* Some of Tailwind Typeography '.prose' settings are a bit wonky, but most are worthwhile */
+.prose {
+  max-width: initial !important; /* 65ch is difficult to override, let's nuke it */
+  margin-left: auto;
+  margin-right: auto;
+}
+.prose img {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.prose figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.prose h2.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose pre,
+pre {
+  font-family: "OCR A", monospace;
+  font-size: 0.8rem;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* .modal {
+    background: #ff0000 !important;
+} */
+
+
