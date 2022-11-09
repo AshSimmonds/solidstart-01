@@ -31,6 +31,7 @@ export default function Root() {
                             </A>
                             <A href="/about">About</A>
                             <A href="/blank">Blank</A>
+                            <A href="/opps">Opps</A>
                         </div>
 
                         <Routes>
