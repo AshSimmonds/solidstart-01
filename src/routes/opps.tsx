@@ -65,7 +65,7 @@ export default function OverseasPayloadPermitListPage() {
             <hr />
             <h2>All permit applications</h2>
             <pre class="overflow-auto h-full">
-                {JSON.stringify(allPermitsObject(), null, 4)}
+                {allPermitsObject() ? JSON.stringify(allPermitsObject(), null, 4) : ''}
             </pre>
 
 
