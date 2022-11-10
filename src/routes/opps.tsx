@@ -46,20 +46,27 @@ export default function OverseasPayloadPermitListPage() {
 
 
     return (
-        <main class="text-center mx-auto ">
+        <main class="prose mx-0 sm:mx-auto sm:w-full md:w-11/12 lg:w-10/12 xl:w-9/12 sm:p-0 md:p-4 border-0 bg-base-200 shadow-xl">
             <h1 >
-                Overseas Payload Permits
+                Overseas Payload Permit Applications
             </h1>
 
             <For each={allPermitsObject()?.overseasPayloadPermits.records}>
-                {(permit) => (
-                    <div>
-                        <h2><A href={`/opp/${permit ? permit.id : ''}`}>{permit ? permit.fields.title : ''}</A></h2>
-                        {/* <p>{permit.fields.description}</p> */}
+                {(permit: any) => (
+                    <div class="mt-16">
+                        <h2 ><A href={`/opp/${permit ? permit.id : ''}`}>{permit ? permit.fields.title : ''}</A></h2>
+                        <pre class="h-24 overflow-hidden hover:overflow-auto hover:h-auto">
+                            {permit.fields.content}
+                        </pre>
                     </div>
                 )}
             </For>
 
+            <hr />
+            <h2>All permit applications</h2>
+            <pre class="overflow-auto h-full">
+                {JSON.stringify(allPermitsObject(), null, 4)}
+            </pre>
 
 
         </main>
