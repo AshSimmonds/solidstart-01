@@ -15,7 +15,7 @@ export function routeData() {
 
             const overseasPayloadPermits = await serverGetPermits()
 
-            console.log(`routeData createRouteData overseasPayloadPermits: ${JSON.stringify(overseasPayloadPermits, null, 4)}`)
+            // console.log(`routeData createRouteData overseasPayloadPermits: ${JSON.stringify(overseasPayloadPermits, null, 4)}`)
 
             return {
                 overseasPayloadPermits
@@ -33,19 +33,7 @@ export function routeData() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// import { A } from "solid-start"
+import { A } from "solid-start"
 import { For } from "solid-js"
 
 
@@ -53,7 +41,7 @@ export default function OverseasPayloadPermitListPage() {
 
     const allPermitsObject = useRouteData<typeof routeData>() //serverOverseasPayloadPermitGetAll()
 
-    // console.log(`OverseasPayloadPermitListPage allPermitsObject: ${JSON.stringify(JSON.stringify(allPermitsObject, null, 4))}`)
+    console.log(`OverseasPayloadPermitListPage allPermitsObject().overseasPayloadPermits: ${JSON.stringify(allPermitsObject()?.overseasPayloadPermits, null, 4)}`)
 
 
 
@@ -66,8 +54,8 @@ export default function OverseasPayloadPermitListPage() {
             <For each={allPermitsObject()?.overseasPayloadPermits.records}>
                 {(permit) => (
                     <div>
-                        {/* <h2>{permit}</h2>
-            <p>{permit.fields.description}</p> */}
+                        <h2><A href={`/opp/${permit ? permit.id : ''}`}>{permit ? permit.fields.title : ''}</A></h2>
+                        {/* <p>{permit.fields.description}</p> */}
                     </div>
                 )}
             </For>
