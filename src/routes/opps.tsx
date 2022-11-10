@@ -1,17 +1,114 @@
-import { A } from "solid-start"
+
+import { createRouteData, useRouteData } from "solid-start"
+
+import server$ from "solid-start/server"
+
+const airtableBaseId = import.meta.env.VITE_AIRTABLE_BASE_ID
+const airtableApiKey = import.meta.env.VITE_AIRTABLE_API_KEY
+
+const airtableBaseUrl = "https://api.airtable.com/v0/" + airtableBaseId + "/"
+const overseasPayloadPermitTable = "overseas_payload_permit"
+const defaultFetchUrl = airtableBaseUrl + overseasPayloadPermitTable
 
 
-export default async function OverseasPayloadPermitListPage() {
 
-    const allPermitsObject = await serverOverseasPayloadPermitGetAll()
 
-    console.log(`OverseasPayloadPermitListPage allPermitsObject: ${JSON.stringify(JSON.stringify(allPermitsObject, null, 4))}`)
+const serverGday = server$(async (message: string) => {
+    console.log(message)
+})
+
+
+
+
+
+
+export function routeData() {
+    return createRouteData(async () => {
+        try {
+
+            const overseasPayloadPermits = await serverGetPermits()
+
+            console.log(`routeData createRouteData overseasPayloadPermits: ${JSON.stringify(overseasPayloadPermits, null, 4)}`)
+
+            return {
+                overseasPayloadPermits
+            }
+        } catch {
+            throw new Error("Data not available")
+        }
+    })
+}
+
+
+
+
+
+async function serverGetPermits(params = {}) {
+
+    const fetchUrl = new URL(defaultFetchUrl)// + filterFormula
+
+    fetchUrl.searchParams.set("api_key", airtableApiKey)
+
+    Object.entries(params).forEach(([key, value]) => {
+        if (value !== void 0) {
+            fetchUrl.searchParams.set(key, value.toString())
+        }
+    })
+
+    const response = await fetch(fetchUrl)
+
+    if (!response.ok) {
+        console.error("Error", response)
+        throw new Error(response.statusText)
+    }
+
+    return await response.json()
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { A } from "solid-start"
+import { For } from "solid-js"
+
+
+export default function OverseasPayloadPermitListPage() {
+
+    const allPermitsObject = useRouteData<typeof routeData>() //serverOverseasPayloadPermitGetAll()
+
+    // console.log(`OverseasPayloadPermitListPage allPermitsObject: ${JSON.stringify(JSON.stringify(allPermitsObject, null, 4))}`)
+
+
 
     return (
         <main class="text-center mx-auto ">
             <h1 >
                 Overseas Payload Permits
             </h1>
+
+<For each={allPermitsObject()?.overseasPayloadPermits.records}>
+    {(permit) => (
+        <div>
+            {/* <h2>{permit}</h2>
+            <p>{permit.fields.description}</p> */}
+        </div>
+    )}
+</For>
+
 
 
         </main>
@@ -25,67 +122,6 @@ export default async function OverseasPayloadPermitListPage() {
 
 
 
-import server$ from "solid-start/server"
-
-const serverGday = server$(async (message: string) => {
-    console.log(message)
-})
-
-
-
-const airtableBaseId = import.meta.env.VITE_AIRTABLE_BASE_ID
-const airtableApiKey = import.meta.env.VITE_AIRTABLE_API_KEY
-const overseasPayloadPermitTable = "overseas_payload_permit"
-const airtableBaseUrl = "https://api.airtable.com/v0/" + airtableBaseId + "/"
-
-const defaultFetchUrl = airtableBaseUrl + overseasPayloadPermitTable
-
-
-
-const serverOverseasPayloadPermitGetAll = server$(async () => {
-
-    const fetchUrl = defaultFetchUrl// + filterFormula
-
-
-    const fetchResult = await fetch(fetchUrl, {
-        method: "GET",
-        headers: {
-            "Authorization": "Bearer " + airtableApiKey,
-            "Content-Type": "application/json"
-        }
-    }).then(airtableResult => airtableResult.json())
-        .then(async airtableJson => {
-            if (airtableJson.records.length > 0) {
-
-                // console.log(`_fetchFromAirtable airtableJson: ${JSON.stringify(airtableJson, null, 4)}`)
-
-                return airtableJson
-
-            } else {
-                // TODO: dunno
-            }
-        }).catch((error: Error) => {
-            console.error(`opps.tsx serverOverseasPayloadPermitGetAll error: ${error}`)
-            return error
-        })
-
-
-
-
-
-
-    // Airtable doesn't return false booleans, so it comes through as undefined, real fucking helpful
-    // if (!fetchResult.records[0].fields.MISSING_FIELD) {
-    //     fetchResult.records[0].fields.MISSING_FIELD = false
-    // }
-
-    console.log(`opps.tsx serverOverseasPayloadPermitGetAll fetchResult: ${JSON.stringify(fetchResult, null, 4)}`)
-
-    return fetchResult
-
-
-
-})
 
 
 
