@@ -30,7 +30,6 @@ export default function Root() {
                                 Index
                             </A>
                             <A href="/about">About</A>
-                            <A href="/blank">Blank</A>
                             <A href="/opps">Overseas Payload Permits</A>
                         </div>
 
