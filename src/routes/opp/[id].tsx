@@ -15,13 +15,13 @@ export function routeData() {
             const params = useParams()
 
             const permitId = params ? params.id : undefined
-            
+
             // console.log(`OverseasPayloadPermitDetailPage permitId: ${JSON.stringify(permitId, null, 4)}`)
-            
 
 
 
-            const overseasPayloadPermits = await serverGetPermits({"permitId": permitId})
+
+            const overseasPayloadPermits = await serverGetPermits({ "permitId": permitId })
 
             console.log(`DETAIL PAGE | routeData createRouteData overseasPayloadPermits.records[0].fields.title: ${JSON.stringify(overseasPayloadPermits.records[0].fields.title, null, 4)}`)
 
@@ -42,23 +42,25 @@ export function routeData() {
 
 export default function OverseasPayloadPermitDetailPage() {
 
-
-
-
-
     const thePermitFunction = useRouteData<typeof routeData>()
 
-    const thePermitItself = thePermitFunction()?.overseasPayloadPermits.records[0].fields
+    // const thePermitItself = thePermitFunction()?.overseasPayloadPermits.records[0].fields
 
-    // const allPermitsObject = useRouteData<typeof routeData>() //serverOverseasPayloadPermitGetAll()
+    console.log(`OverseasPayloadPermitDetailPage thePermitFunction()?.overseasPayloadPermits.records[0].fields: ${JSON.stringify(thePermitFunction()?.overseasPayloadPermits.records[0].fields, null, 4)}`)
 
-    // console.log(`OverseasPayloadPermitDetailPage thePermit: ${JSON.stringify(thePermit, null, 4)}`)
+    // if (!thePermitItself) {
+    //     return <div>loading...</div>
+    // }
 
 
     return (
         <main class="text-center mx-auto ">
-            <h1>{thePermitItself?.title}</h1>
+            <h1>{thePermitFunction()?.overseasPayloadPermits.records[0].fields.title}</h1>
 
+            <h3>Full source <a href="https://jsoncrack.com/editor" target="_blank" rel="noreferrer" class="underline">(JSON visualiser)</a></h3>
+            <textarea class="w-full h-96 bg-slate-800 text-green-500">
+                {thePermitFunction()?.overseasPayloadPermits.records[0].fields ? thePermitFunction()?.overseasPayloadPermits.records[0].fields.content as string : ''}
+            </textarea>
 
         </main>
     )
