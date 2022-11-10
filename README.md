@@ -14,4 +14,4 @@ I don't really know what I'm doing yet (I mean, it's just Shiny-Object-Syndrome 
 
 ## Vid of me messing around building the second half
 
-<a href="https://www.youtube.com/Ay6ye5icRGk" ><img src="https://raw.githubusercontent.com/AshSimmonds/solidstart-01/main/public/ash-vid.png" /></a>
+<a href="https://www.youtube.com/v/Ay6ye5icRGk" ><img src="https://raw.githubusercontent.com/AshSimmonds/solidstart-01/main/public/ash-vid.png" /></a>
