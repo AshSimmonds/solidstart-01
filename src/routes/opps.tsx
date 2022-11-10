@@ -3,15 +3,6 @@ import { createRouteData, useRouteData } from "solid-start"
 
 import { serverGetPermits } from "../api/permits"
 
-import server$ from "solid-start/server"
-
-
-
-
-
-// const serverGday = server$(async (message: string) => {
-//     console.log(message)
-// })
 
 
 
