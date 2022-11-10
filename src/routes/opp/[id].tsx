@@ -23,8 +23,8 @@ export function routeData() {
 
             const overseasPayloadPermits = await serverGetPermits({"permitId": permitId})
 
-            console.log(`DETAIL PAGE | routeData createRouteData overseasPayloadPermits.records[0]: ${JSON.stringify(overseasPayloadPermits.records[0].fields.title, null, 4)}`)
-//recbr6s0W3tRpfUSw
+            console.log(`DETAIL PAGE | routeData createRouteData overseasPayloadPermits.records[0].fields.title: ${JSON.stringify(overseasPayloadPermits.records[0].fields.title, null, 4)}`)
+
             return {
                 overseasPayloadPermits
             }
@@ -46,19 +46,18 @@ export default function OverseasPayloadPermitDetailPage() {
 
 
 
-    // const thePermit = useRouteData<typeof routeData({ permitId: permitId }>()
+    const thePermitFunction = useRouteData<typeof routeData>()
+
+    const thePermitItself = thePermitFunction()?.overseasPayloadPermits.records[0].fields
 
     // const allPermitsObject = useRouteData<typeof routeData>() //serverOverseasPayloadPermitGetAll()
-
 
     // console.log(`OverseasPayloadPermitDetailPage thePermit: ${JSON.stringify(thePermit, null, 4)}`)
 
 
     return (
         <main class="text-center mx-auto ">
-            <h1 >
-                Overseas Payload Permit Application
-            </h1>
+            <h1>{thePermitItself?.title}</h1>
 
 
         </main>
