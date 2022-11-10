@@ -21,6 +21,7 @@
     "daisyui": "^2.39.0",
     "solid-js": "^1.6.0",
     "solid-start": "^0.2.0",
+    "solid-start-vercel": "^0.2.5",
     "solidstart-01": "file:",
     "undici": "^5.11.0"
   },
