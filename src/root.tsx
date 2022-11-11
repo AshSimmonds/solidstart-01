@@ -31,7 +31,7 @@ export default function Root() {
                         <Routes>
                             <FileRoutes />
                         </Routes>
-                        
+
                     </ErrorBoundary>
                 </Suspense>
                 <Scripts />
@@ -45,14 +45,14 @@ export default function Root() {
 
 function HeaderBar() {
     return (
-        <div class="navbar bg-base-100 bg-gradient-to-b from-base-100 via-base-100 to-base-200 shadow-xl border-b-2 border-primary border-opacity-10 mb-4">
+        <div class="navbar bg-transparent mb-4">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabIndex={0} class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><A href="/asdf" >asdf</A></li>
+                        <li><A href="/asdf" >Stuff</A></li>
                         {/* <li tabIndex={0}>
                             <Link href="/linktwo" class="justify-between">
                                 Parent
@@ -62,15 +62,18 @@ function HeaderBar() {
                                 <li><Link href="/linktwosubtwo">Submenu 2</Link></li>
                             </ul>
                         </li> */}
-                        <li><A href="/users">Users</A></li>
+                        <li><A href="/about">About</A></li>
                         <li><A href="/typography">Typography</A></li>
+                        <li><A href="/opps">Overseas Payload Permits</A></li>
                     </ul>
                 </div>
-                <A href="/index-old" ><img src={`/blue_dwarf_space_long_logo-undefined.png`} alt="Blue Dwarf Space logo" class="max-h-12 max-w-36 cursor-pointer" /></A>
+                <A href="/" ><img src={`/blue_dwarf_space_long_logo-undefined.png`} alt="Blue Dwarf Space logo" class="max-h-12 max-w-36 cursor-pointer" /></A>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
-                    <li><A href="/asdf">PAGES</A></li>
+                    <li><A href="/asdf">Stuff</A></li>
+                    <li><A href="/about">About</A></li>
+                    <li><A href="/opps">Overseas Payload Permits</A></li>
                     {/* <li tabIndex={0}>
                         <Link href="/linktwo">
                             Parent
@@ -85,6 +88,7 @@ function HeaderBar() {
                 </ul>
             </div>
             <div class="navbar-end">
+                <A href="/profile" class="btn btn-circle btn-accent">Profile</A>
                 {/* {!isLoading && user?.picture ? (<Link href="/profile" class="btn btn-circle border-1 border-neutral-content"><img src={user.picture} class="w-full rounded-full" alt='avatar' /></Link>) : (<Link href="/api/auth/login" class="btn btn-circle btn-accent">Login</Link>)} */}
             </div>
         </div>
