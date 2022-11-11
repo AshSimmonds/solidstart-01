@@ -5,8 +5,6 @@ export default function TypographyIndexPage() {
         <div>
             <h1>Typography and styling resources</h1>
 
-            <h2>How stuff looks on this site</h2>
-
             <div class="btn-group">
                 <A href="/typography-html" class="btn btn-outline">STANDARD HTML</A>
 

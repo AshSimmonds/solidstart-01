@@ -1,5 +1,6 @@
 // TODO: figure out if css can be embedded in the page itself, this is only 1 line which applies only on typography example pages
-import "../styles/typography.css"
+// import "../styles/typography.module.css"
+// import { TypographyHtmlComponent } from "~/components/Typography"
 
 export default function TypographyHtmlPage() {
 
@@ -9,7 +10,9 @@ export default function TypographyHtmlPage() {
 
             <h1>Typography HTML (mostly)</h1>
 
-            <h2 class="typography-html" >Paragraphs</h2>
+            {/* <TypographyHtmlComponent /> */}
+
+            <h2 class="mt-16 mb-4">Paragraphs</h2>
             <p>
                 Bacon ipsum dolor amet salami chislic flank, meatloaf short loin id
                 dolor nisi. Chislic bresaola rump adipisicing capicola, ground round
@@ -31,7 +34,7 @@ export default function TypographyHtmlPage() {
                 ribeye jerky capicola shank beef ribs landjaeger excepteur.
             </p>
 
-            <h2>Buttons</h2>
+            <h2 class="mt-16 mb-4">Buttons</h2>
             <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
                 <button class="btn">btn</button>
 
@@ -46,7 +49,7 @@ export default function TypographyHtmlPage() {
                 <button class="btn btn-error">btn btn-error</button>
             </div>
 
-            <h2>Badges</h2>
+            <h2 class="mt-16 mb-4">Badges</h2>
             <div class="grid grid-cols-2 place-items-center gap-2 md:grid-cols-4">
                 <span class="badge">badge</span>
                 <span class="badge badge-primary">badge badge-primary</span>
@@ -58,14 +61,14 @@ export default function TypographyHtmlPage() {
                 <span class="badge badge-error">badge badge-error</span>
             </div>
 
-            <h2>Tabs (they do not work, need finesse)</h2>
+            <h2 class="mt-16 mb-4">Tabs (they do not work, need finesse)</h2>
             <div class="tabs">
                 <button class="tab tab-lifted">tab tab-lifted</button>
                 <button class="tab tab-lifted tab-active">tab tab-lifted tab-active</button>
                 <button class="tab tab-lifted">tab tab-lifted</button>
             </div>
 
-            <h2>Links, well - span with link class</h2>
+            <h2 class="mt-16 mb-4">Links, well - span with link class</h2>
             <div class="flex flex-col">
                 <span class="link">link</span>
                 <span class="link link-primary">link link-primary</span>
@@ -75,7 +78,7 @@ export default function TypographyHtmlPage() {
                 <span class="link link-accent">link link-accent</span>
             </div>
 
-            <h2>Progress bars</h2>
+            <h2 class="mt-16 mb-4">Progress bars</h2>
             <div class="flex flex-col gap-3 md:w-1/2">
                 <progress value="20" max="100" class="progress">Default</progress>
                 <progress value="25" max="100" class="progress progress-primary">Primary</progress>
@@ -99,7 +102,7 @@ export default function TypographyHtmlPage() {
                 </progress>
             </div>
 
-            <h2>Stats card</h2>
+            <h2 class="mt-16 mb-4">Stats card</h2>
             <div class="stats bg-base-300 border-base-300 border md:w-1/2">
                 <div class="stat">
                     <div class="stat-title">Total Page Views</div>
@@ -108,7 +111,7 @@ export default function TypographyHtmlPage() {
                 </div>
             </div>
 
-            <h2>Radial progress dials</h2>
+            <h2 class="mt-16 mb-4">Radial progress dials</h2>
             <div
                 class="flex flex-wrap items-center justify-center gap-3 md:w-1/2"
             >
@@ -123,7 +126,7 @@ export default function TypographyHtmlPage() {
                 </div>
             </div>
 
-            <h2>Toggles</h2>
+            <h2 class="mt-16 mb-4">Toggles</h2>
             <div>
                 <input type="checkbox" class="toggle" checked />
                 <input
@@ -143,7 +146,7 @@ export default function TypographyHtmlPage() {
                 />
             </div>
 
-            <h2>Checkboxes</h2>
+            <h2 class="mt-16 mb-4">Checkboxes</h2>
             <div>
                 <input type="checkbox" class="checkbox" checked />
                 <input
@@ -163,7 +166,7 @@ export default function TypographyHtmlPage() {
                 />
             </div>
 
-            <h2>Radio selectors</h2>
+            <h2 class="mt-16 mb-4">Radio selectors</h2>
             <div>
                 <input type="radio" name="radio-1" class="radio" checked />
                 <input
@@ -183,7 +186,7 @@ export default function TypographyHtmlPage() {
                 />
             </div>
 
-            <h2>Range sliders</h2>
+            <h2 class="mt-16 mb-4">Range sliders</h2>
             <div>
                 <input
                     type="range"
@@ -216,7 +219,7 @@ export default function TypographyHtmlPage() {
             </div>
 
 
-            <h2>Text inputs</h2>
+            <h2 class="mt-16 mb-4">Text inputs</h2>
             <div class="flex flex-col gap-4" >
                 <input
                     type="text"
@@ -266,7 +269,7 @@ export default function TypographyHtmlPage() {
             </div>
 
 
-            <h2>Textareas</h2>
+            <h2 class="mt-16 mb-4">Textareas</h2>
             <div class="flex flex-col gap-4">
                 <textarea
                     placeholder="textarea"
@@ -309,7 +312,7 @@ export default function TypographyHtmlPage() {
 
 
             
-            <h2>Text sizes</h2>
+            <h2 class="mt-16 mb-4">Text sizes</h2>
             <div class="flex flex-grow flex-col gap-3">
                 <div class="text-4xl">text-4xl</div>
                 <div class="text-3xl">text-3xl</div>
@@ -320,7 +323,7 @@ export default function TypographyHtmlPage() {
                 <div class="text-xs">text-xs</div>
             </div>
 
-            <h2>Progress steps</h2>
+            <h2 class="mt-16 mb-4">Progress steps</h2>
             <div>
                 <ul class="steps steps-vertical">
                     <li class="step step-primary">step step-primary</li>
@@ -330,7 +333,7 @@ export default function TypographyHtmlPage() {
                 </ul>
             </div>
 
-            <h2>Alerts</h2>
+            <h2 class="mt-16 mb-4">Alerts</h2>
             <div class="flex flex-col gap-3">
                 <div class="alert">
                     <div>
@@ -424,7 +427,7 @@ export default function TypographyHtmlPage() {
                 </div>
             </div>
 
-            <h2>Typography</h2>
+            <h2 class="mt-16 mb-4">Typography</h2>
             <div
                 class="min-h-screen py-8 flex flex-col justify-center relative overflow-hidden lg:py-12"
             >
@@ -522,7 +525,7 @@ export default function TypographyHtmlPage() {
                             >.
                         </p>
                         <hr />
-                        <h2>What to expect from here on out</h2>
+                        <h2 class="mt-16 mb-4">What to expect from here on out</h2>
                         <p>
                             What follows from here is just a bunch of absolute nonsense
                             I've written to dogfood the plugin itself. It includes every
@@ -585,7 +588,7 @@ export default function TypographyHtmlPage() {
                             <li>Later, we'll use longer, more complex list items.</li>
                         </ul>
                         <p>And that's the end of this section.</p>
-                        <h2>What if we stack headings?</h2>
+                        <h2 class="mt-16 mb-4">What if we stack headings?</h2>
                         <h3>We should make sure that looks good, too.</h3>
                         <p>
                             Sometimes you have headings directly underneath each other.
@@ -655,7 +658,7 @@ export default function TypographyHtmlPage() {
                             or paragraph, because it kinda looks weird jumping right to
                             a heading.
                         </p>
-                        <h2>Code should look okay by default.</h2>
+                        <h2 class="mt-16 mb-4">Code should look okay by default.</h2>
                         <p>
                             I think most people are going to use <a
                                 href="https://highlightjs.org/">highlight.js</a
@@ -805,7 +808,7 @@ export default function TypographyHtmlPage() {
                             </li>
                         </ul>
                         <p>And finally a sentence to close off this section.</p>
-                        <h2>There are other elements we need to style</h2>
+                        <h2 class="mt-16 mb-4">There are other elements we need to style</h2>
                         <p>
                             I almost forgot to mention links, like <a
                                 href="https://tailwindcss.com"

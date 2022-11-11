@@ -1,5 +1,5 @@
 // TODO: figure out if css can be embedded in the page itself, this is only 1 line which applies only on typography example pages
-import "../styles/typography.css"
+// import "../styles/typography.module.css"
 
 export default function TypographyHtmlPage() {
     return (
