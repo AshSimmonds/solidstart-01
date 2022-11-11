@@ -1,8 +1,16 @@
-import { A } from "solid-start";
+// TODO: figure out if css can be embedded in the page itself, this is only 1 line which applies only on typography example pages
+import "../styles/typography.css"
 
 export default function TypographyHtmlPage() {
     return (
         <div>
+
+            <p class="alert alert-warning" >
+                This page is way outdated, it's mostly just good for previewing colour schemes. TODO: merge with the other typography page.
+            </p>
+
+            <hr class="my-8" />
+
             <a href="https://themes.ionevolve.com/" class="btn btn-info" target="_blank">Theme editor:
                 https://themes.ionevolve.com/</a>
 

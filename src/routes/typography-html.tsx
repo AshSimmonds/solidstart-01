@@ -1,11 +1,15 @@
-import { A } from "solid-start";
+// TODO: figure out if css can be embedded in the page itself, this is only 1 line which applies only on typography example pages
+import "../styles/typography.css"
 
 export default function TypographyHtmlPage() {
+
+    
     return (
         <div>
+
             <h1>Typography HTML (mostly)</h1>
 
-            <h2>Paragraphs</h2>
+            <h2 class="typography-html" >Paragraphs</h2>
             <p>
                 Bacon ipsum dolor amet salami chislic flank, meatloaf short loin id
                 dolor nisi. Chislic bresaola rump adipisicing capicola, ground round
@@ -14,6 +18,7 @@ export default function TypographyHtmlPage() {
                 incididunt ex capicola swine. Cow fatback duis ball tip nisi, bacon
                 minim strip steak spare ribs cupidatat drumstick.
             </p>
+
             <h3>Moving gradient background</h3>
             <p class="gradient-background">
                 Id veniam pancetta, picanha voluptate ham fatback excepteur meatloaf
@@ -28,275 +33,304 @@ export default function TypographyHtmlPage() {
 
             <h2>Buttons</h2>
             <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
-                <button class="btn">Default</button>
+                <button class="btn">btn</button>
 
-                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-primary">btn btn-primary</button>
 
-                <button class="btn btn-secondary">Secondary</button>
-                <button class="btn btn-accent">Accent</button>
-                <button class="btn btn-info">Info</button>
+                <button class="btn btn-secondary">btn btn-secondary</button>
+                <button class="btn btn-accent">btn btn-accent</button>
+                <button class="btn btn-info">btn btn-info</button>
 
-                <button class="btn btn-success">Success</button>
-                <button class="btn btn-warning">Warning</button>
-                <button class="btn btn-error">Error</button>
+                <button class="btn btn-success">btn btn-success</button>
+                <button class="btn btn-warning">btn btn-warning</button>
+                <button class="btn btn-error">btn btn-error</button>
             </div>
+
+            <h2>Badges</h2>
             <div class="grid grid-cols-2 place-items-center gap-2 md:grid-cols-4">
-                <span class="badge">Default</span>
-                <span class="badge badge-primary">Primary</span>
-                <span class="badge badge-secondary">Secondary</span>
-                <span class="badge badge-accent">Accent</span>
-                <span class="badge badge-info">Info</span>
-                <span class="badge badge-success">Success</span>
-                <span class="badge badge-warning">Warning</span>
-                <span class="badge badge-error">Error</span>
+                <span class="badge">badge</span>
+                <span class="badge badge-primary">badge badge-primary</span>
+                <span class="badge badge-secondary">badge badge-secondary</span>
+                <span class="badge badge-accent">badge badge-accent</span>
+                <span class="badge badge-info">badge badge-info</span>
+                <span class="badge badge-success">badge badge-success</span>
+                <span class="badge badge-warning">badge badge-warning</span>
+                <span class="badge badge-error">badge badge-error</span>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="flex flex-col gap-3 md:flex-row">
-                    <div class="md:w-1/2">
-                        <div class="tabs">
-                            <button class="tab tab-lifted">Tab</button>
-                            <button class="tab tab-lifted tab-active">Tab</button>
-                            <button class="tab tab-lifted">Tab</button>
-                        </div>
 
-                        <div class="flex flex-col">
-                            <span class="link">I&#39;m a simple link</span>
-                            <span class="link link-primary">I&#39;m a simple link</span>
-                            <span class="link link-secondary"
-                            >I&#39;m a simple link</span
-                            >
-                            <span class="link link-accent">I&#39;m a simple link</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3 md:w-1/2">
-                        <progress value="20" max="100" class="progress"
-                        >Default</progress
-                        >
-                        <progress value="25" max="100" class="progress progress-primary"
-                        >Primary
-                        </progress>
-                        <progress
-                            value="30"
-                            max="100"
-                            class="progress progress-secondary"
-                        >Secondary
-                        </progress>
-                        <progress value="40" max="100" class="progress progress-accent"
-                        >Accent
-                        </progress>
-                        <progress value="45" max="100" class="progress progress-info"
-                        >Info
-                        </progress>
-                        <progress value="55" max="100" class="progress progress-success"
-                        >Success
-                        </progress>
-                        <progress value="70" max="100" class="progress progress-warning"
-                        >Warning
-                        </progress>
-                        <progress value="90" max="100" class="progress progress-error"
-                        >Error
-                        </progress>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-3 md:flex-row">
-                    <div class="stats bg-base-300 border-base-300 border md:w-1/2">
-                        <div class="stat">
-                            <div class="stat-title">Total Page Views</div>
-                            <div class="stat-value">89,400</div>
-                            <div class="stat-desc">21% more than last month</div>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-wrap items-center justify-center gap-3 md:w-1/2"
-                    >
-                        <div class="radial-progress" style="--value:60;--size:3.5rem">
-                            60%
-                        </div>
-                        <div class="radial-progress" style="--value:75;--size:3.5rem">
-                            75%
-                        </div>
-                        <div class="radial-progress" style="--value:90;--size:3.5rem">
-                            90%
-                        </div>
-                    </div>
+            <h2>Tabs (they do not work, need finesse)</h2>
+            <div class="tabs">
+                <button class="tab tab-lifted">tab tab-lifted</button>
+                <button class="tab tab-lifted tab-active">tab tab-lifted tab-active</button>
+                <button class="tab tab-lifted">tab tab-lifted</button>
+            </div>
+
+            <h2>Links, well - span with link class</h2>
+            <div class="flex flex-col">
+                <span class="link">link</span>
+                <span class="link link-primary">link link-primary</span>
+                <span class="link link-secondary"
+                >link link-secondary</span
+                >
+                <span class="link link-accent">link link-accent</span>
+            </div>
+
+            <h2>Progress bars</h2>
+            <div class="flex flex-col gap-3 md:w-1/2">
+                <progress value="20" max="100" class="progress">Default</progress>
+                <progress value="25" max="100" class="progress progress-primary">Primary</progress>
+                <progress
+                    value="30"
+                    max="100"
+                    class="progress progress-secondary"
+                >Secondary</progress>
+                <progress value="40" max="100" class="progress progress-accent"
+                >Accent</progress>
+                <progress value="45" max="100" class="progress progress-info"
+                >Info</progress>
+                <progress value="55" max="100" class="progress progress-success"
+                >Success
+                </progress>
+                <progress value="70" max="100" class="progress progress-warning"
+                >Warning
+                </progress>
+                <progress value="90" max="100" class="progress progress-error"
+                >Error
+                </progress>
+            </div>
+
+            <h2>Stats card</h2>
+            <div class="stats bg-base-300 border-base-300 border md:w-1/2">
+                <div class="stat">
+                    <div class="stat-title">Total Page Views</div>
+                    <div class="stat-value">89,400</div>
+                    <div class="stat-desc">21% more than last month</div>
                 </div>
             </div>
-            <div class="flex flex-col gap-3">
-                <div class="flex flex-col gap-3 md:flex-row">
-                    <div class="md:w-1/2">
-                        <div>
-                            <input type="checkbox" class="toggle" checked />
-                            <input
-                                type="checkbox"
-                                class="toggle toggle-primary"
-                                checked
-                            />
-                            <input
-                                type="checkbox"
-                                class="toggle toggle-secondary"
-                                checked
-                            />
-                            <input
-                                type="checkbox"
-                                class="toggle toggle-accent"
-                                checked
-                            />
-                        </div>
-                        <div>
-                            <input type="checkbox" class="checkbox" checked />
-                            <input
-                                type="checkbox"
-                                class="checkbox checkbox-primary"
-                                checked
-                            />
-                            <input
-                                type="checkbox"
-                                class="checkbox checkbox-secondary"
-                                checked
-                            />
-                            <input
-                                type="checkbox"
-                                class="checkbox checkbox-accent"
-                                checked
-                            />
-                        </div>
-                        <div>
-                            <input type="radio" name="radio-1" class="radio" checked />
-                            <input
-                                type="radio"
-                                name="radio-1"
-                                class="radio radio-primary"
-                            />
-                            <input
-                                type="radio"
-                                name="radio-1"
-                                class="radio radio-secondary"
-                            />
-                            <input
-                                type="radio"
-                                name="radio-1"
-                                class="radio radio-accent"
-                            />
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value="90"
-                            class="range range-xs"
-                        />
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value="70"
-                            class="range range-xs range-primary"
-                        />
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value="50"
-                            class="range range-xs range-secondary"
-                        />
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            value="40"
-                            class="range range-xs range-accent"
-                        />
-                    </div>
+
+            <h2>Radial progress dials</h2>
+            <div
+                class="flex flex-wrap items-center justify-center gap-3 md:w-1/2"
+            >
+                <div class="radial-progress" style="--value:60;--size:3.5rem">
+                    60%
                 </div>
-                <div class="flex flex-col gap-3 md:flex-row">
-                    <div class="flex flex-col gap-3 md:w-1/2">
-                        <input
-                            type="text"
-                            placeholder="Default"
-                            class="input input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Primary"
-                            class="input input-primary input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Secondary"
-                            class="input input-secondary input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Accent"
-                            class="input input-accent input-bordered w-full"
-                        />
-                    </div>
-                    <div class="flex flex-col gap-3 md:w-1/2">
-                        <input
-                            type="text"
-                            placeholder="Info"
-                            class="input input-info input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Success"
-                            class="input input-success input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Warning"
-                            class="input input-warning input-bordered w-full"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Error"
-                            class="input input-error input-bordered w-full"
-                        />
-                    </div>
+                <div class="radial-progress" style="--value:75;--size:3.5rem">
+                    75%
                 </div>
-                <div class="navbar bg-neutral text-neutral-content rounded-box">
-                    <div class="flex-none">
-                        <button class="btn btn-square btn-ghost">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                class="inline-block h-5 w-5 stroke-current"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex-1">
-                        <button class="btn btn-ghost text-xl normal-case"
-                        >daisyUI</button
-                        >
-                    </div>
-                </div>
-                <div class="flex gap-3">
-                    <div class="flex flex-grow flex-col gap-3">
-                        <div class="text-4xl font-bold">Text Size 1<span class="badge">text-4xl</span></div>
-                        <div class="text-3xl font-bold">Text Size 2 <span class="badge">text-3xl</span></div>
-                        <div class="text-2xl font-bold">Text Size 3 <span class="badge">text-2xl</span></div>
-                        <div class="text-xl font-bold">Text Size 4 <span class="badge">text-xl</span></div>
-                        <div class="text-lg font-bold">Text Size 5 <span class="badge">text-lg</span></div>
-                        <div class="text-sm font-bold">Text Size 6 <span class="badge">text-sm</span></div>
-                        <div class="text-xs font-bold">Text Size 7 <span class="badge">text-xs</span></div>
-                    </div>
-                    <ul class="steps steps-vertical">
-                        <li class="step step-primary">Step 1</li>
-                        <li class="step step-primary">Step 2</li>
-                        <li class="step">Step 3</li>
-                        <li class="step">Step 4</li>
-                    </ul>
+                <div class="radial-progress" style="--value:90;--size:3.5rem">
+                    90%
                 </div>
             </div>
+
+            <h2>Toggles</h2>
+            <div>
+                <input type="checkbox" class="toggle" checked />
+                <input
+                    type="checkbox"
+                    class="toggle toggle-primary"
+                    checked
+                />
+                <input
+                    type="checkbox"
+                    class="toggle toggle-secondary"
+                    checked
+                />
+                <input
+                    type="checkbox"
+                    class="toggle toggle-accent"
+                    checked
+                />
+            </div>
+
+            <h2>Checkboxes</h2>
+            <div>
+                <input type="checkbox" class="checkbox" checked />
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    checked
+                />
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-secondary"
+                    checked
+                />
+                <input
+                    type="checkbox"
+                    class="checkbox checkbox-accent"
+                    checked
+                />
+            </div>
+
+            <h2>Radio selectors</h2>
+            <div>
+                <input type="radio" name="radio-1" class="radio" checked />
+                <input
+                    type="radio"
+                    name="radio-1"
+                    class="radio radio-primary"
+                />
+                <input
+                    type="radio"
+                    name="radio-1"
+                    class="radio radio-secondary"
+                />
+                <input
+                    type="radio"
+                    name="radio-1"
+                    class="radio radio-accent"
+                />
+            </div>
+
+            <h2>Range sliders</h2>
+            <div>
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="90"
+                    class="range range-xs"
+                />
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="70"
+                    class="range range-xs range-primary"
+                />
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="range range-xs range-secondary"
+                />
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="40"
+                    class="range range-xs range-accent"
+                />
+            </div>
+
+
+            <h2>Text inputs</h2>
+            <div class="flex flex-col gap-4" >
+                <input
+                    type="text"
+                    placeholder="input"
+                    class="input"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-bordered"
+                    class="input input-bordered"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-primary"
+                    class="input input-primary"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-secondary"
+                    class="input input-secondary"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-accent"
+                    class="input input-accent"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-info"
+                    class="input input-info"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-success"
+                    class="input input-success"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-warning"
+                    class="input input-warning"
+                />
+                <input
+                    type="text"
+                    placeholder="input input-error"
+                    class="input input-error"
+                />
+            </div>
+
+
+            <h2>Textareas</h2>
+            <div class="flex flex-col gap-4">
+                <textarea
+                    placeholder="textarea"
+                    class="textarea"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-bordered"
+                    class="textarea textarea-bordered"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-primary"
+                    class="textarea textarea-primary"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-secondary"
+                    class="textarea textarea-secondary"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-accent textarea-bordered w-full"
+                    class="textarea textarea-accent textarea-bordered w-full"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-info textarea-bordered w-full"
+                    class="textarea textarea-info textarea-bordered w-full"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-success textarea-bordered w-full"
+                    class="textarea textarea-success textarea-bordered w-full"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-warning textarea-bordered w-full"
+                    class="textarea textarea-warning textarea-bordered w-full"
+                ></textarea>
+                <textarea
+                    placeholder="textarea textarea-error textarea-bordered w-full"
+                    class="textarea textarea-error textarea-bordered w-full"
+                ></textarea>
+            </div>
+
+
+
+            
+            <h2>Text sizes</h2>
+            <div class="flex flex-grow flex-col gap-3">
+                <div class="text-4xl">text-4xl</div>
+                <div class="text-3xl">text-3xl</div>
+                <div class="text-2xl">text-2xl</div>
+                <div class="text-xl">text-xl</div>
+                <div class="text-lg">text-lg</div>
+                <div class="text-sm">text-sm</div>
+                <div class="text-xs">text-xs</div>
+            </div>
+
+            <h2>Progress steps</h2>
+            <div>
+                <ul class="steps steps-vertical">
+                    <li class="step step-primary">step step-primary</li>
+                    <li class="step step-primary">step step-primary2</li>
+                    <li class="step">step</li>
+                    <li class="step">step</li>
+                </ul>
+            </div>
+
+            <h2>Alerts</h2>
             <div class="flex flex-col gap-3">
                 <div class="alert">
                     <div>
@@ -313,7 +347,7 @@ export default function TypographyHtmlPage() {
                                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                             ></path>
                         </svg>
-                        <span>12 unread messages. Tap to see.</span>
+                        <span>alert</span>
                     </div>
                 </div>
                 <div class="alert alert-info">
@@ -331,7 +365,7 @@ export default function TypographyHtmlPage() {
                                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                             ></path>
                         </svg>
-                        <span>New software update available.</span>
+                        <span>alert alert-info</span>
                     </div>
                 </div>
                 <div class="alert alert-success">
@@ -349,7 +383,7 @@ export default function TypographyHtmlPage() {
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                             ></path>
                         </svg>
-                        <span>Your purchase has been confirmed!</span>
+                        <span>alert alert-success</span>
                     </div>
                 </div>
                 <div class="alert alert-warning">
@@ -367,7 +401,7 @@ export default function TypographyHtmlPage() {
                                 d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                             ></path>
                         </svg>
-                        <span>Warning: Invalid email address!</span>
+                        <span>alert alert-warning</span>
                     </div>
                 </div>
                 <div class="alert alert-error">
@@ -385,11 +419,12 @@ export default function TypographyHtmlPage() {
                                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
                             ></path>
                         </svg>
-                        <span>Error! Task failed successfully.</span>
+                        <span>alert alert-error</span>
                     </div>
                 </div>
             </div>
 
+            <h2>Typography</h2>
             <div
                 class="min-h-screen py-8 flex flex-col justify-center relative overflow-hidden lg:py-12"
             >
@@ -882,6 +917,6 @@ export default function TypographyHtmlPage() {
                     </div>
                 </div>
             </div>
-</div>
-    );
+        </div>
+    )
 }
