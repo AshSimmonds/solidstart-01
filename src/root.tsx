@@ -70,7 +70,7 @@ function HeaderBar() {
                 <A href="/" ><img src={`/blue_dwarf_space_long_logo-undefined.png`} alt="Blue Dwarf Space logo" class="max-h-12 max-w-36 cursor-pointer" /></A>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0">
+                <ul class="menu menu-horizontal p-0 font-bold">
                     <li><A href="/asdf">Stuff</A></li>
                     <li><A href="/about">About</A></li>
                     <li><A href="/opps">Overseas Payload Permits</A></li>
