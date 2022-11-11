@@ -8,13 +8,12 @@ export default function TypographyIndexPage() {
             <h2>How stuff looks on this site</h2>
 
             <div class="btn-group">
-                <a href="/typography-html" class="btn btn-outline">STANDARD HTML</a>
+                <A href="/typography-html" class="btn btn-outline">STANDARD HTML</A>
 
-                <a href="/typography-markdown" class="btn btn-outline">MARKDOWN</a>
+                <A href="/typography-markdown" class="btn btn-outline">MARKDOWN</A>
 
-                <a href="/typography-tailwind" class="btn btn-outline"
-                >TAILWIND COMPONENTS</a
-                >
+                <A href="/typography-tailwind" class="btn btn-outline"
+                >TAILWIND COMPONENTS</A>
             </div>
 
             <h2>External resources</h2>
