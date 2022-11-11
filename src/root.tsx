@@ -36,6 +36,8 @@ export default function Root() {
 
                         </main>
 
+                        <FooterBar />
+
                     </ErrorBoundary>
                 </Suspense>
                 <Scripts />
@@ -128,4 +130,18 @@ function HeaderLinks(props) {
 
     )
 
+}
+
+
+
+function FooterBar() {
+    return (
+        <footer class="footer footer-center p-4 mt-4 text-base-content
+        bg-transparent flex justify-between">
+            <A href={"/"}><img src="/blue_dwarf_space_notext_logo_small.png" alt="Blue Dwarf Space logo"
+                class="w-8 justify-self-start" /></A>
+
+            <A href={"/asdf"}>Stuff</A>
+        </footer>
+    )
 }
