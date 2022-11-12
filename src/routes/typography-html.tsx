@@ -77,11 +77,11 @@ export default function TypographyHtmlPage() {
                 <button class="btn btn-error">class="btn btn-error"</button>
             </div>
 
-            <h2 id="links-buttons" class="mt-16 mb-4">Links with btn class (eg. &lta class="btn ..." &gt&lt/a&gt)</h2>
+            <h2 id="links-buttons" class="mt-16 mb-4">Links with btn class</h2>
 
-            Leaving the "btn" class off is not really catered for yet.
+            (eg. &lta class="btn ..." &gt&lt/a&gt)
 
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 mt-8">
                 <A href="#links-buttons" class="btn">class="btn"</A>
 
                 <A href="#links-buttons" class="btn-primary">class="btn-primary"</A>
