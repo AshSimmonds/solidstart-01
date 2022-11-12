@@ -8,7 +8,7 @@ export default function TypographyHtmlPage() {
     return (
         <div>
 
-            <h1>Typography HTML (mostly)</h1>
+            <h1>Typography</h1>
 
             {/* <TypographyHtmlComponent /> */}
 
