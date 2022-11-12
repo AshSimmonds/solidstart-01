@@ -62,17 +62,26 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #02597f;
+  /* color: #02597f; */
+  color: #0a7dae;
 }
+
+/* .menu :where(li) > :where(*:not(ul)) { */
 
 a:hover {
   text-decoration: none;
-  color: #0273a5;
+  /* color: #0273a5; */
+  color: #91deff;
 }
 
 .btn {
   text-decoration: none;
 }
+
+a.btn:hover {
+  color: initial;
+}
+
 
 /* Tailwind makes ALL THE BUTTONS UPPER CASE PLS STAHP */
 .btn {

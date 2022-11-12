@@ -7,7 +7,7 @@ export default function AsdfPage() {
                 asdf
             </h1>
 
-            <h2>asdf</h2>
+            <h2>Basically an empty page template for now.</h2>
 
             <div>
                 asdf
