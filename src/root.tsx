@@ -32,7 +32,7 @@ export default function Root() {
 
                         <HeaderBar />
 
-                        <main>
+                        <main class="p-4">
 
                             <Routes>
                                 <FileRoutes />
@@ -140,7 +140,7 @@ function HeaderLinks(props) {
 
 function FooterBar() {
     return (
-        <footer class="footer footer-center p-4 mt-4 text-base-content
+        <footer class="footer footer-center p-4 mt-24 text-base-content
         bg-transparent flex justify-between">
             <A href={"/"}><img src="/blue_dwarf_space_notext_logo_small.png" alt="Blue Dwarf Space logo"
                 class="w-8 justify-self-start" /></A>
