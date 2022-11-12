@@ -11,7 +11,7 @@ body,
 .prose body,
 .prose {
   font-family: "Rajdhani", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .prose h1,
@@ -19,12 +19,14 @@ h1 {
   font-size: 2.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 800;
 }
 .prose h2,
 h2 {
   font-size: 2.0rem;
   margin-top: 1.0rem;
   margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 .prose h3,
 h3 {
@@ -86,6 +88,7 @@ a.btn:hover {
 /* Tailwind makes ALL THE BUTTONS UPPER CASE PLS STAHP */
 .btn {
   text-transform: initial;
+  font-size: 1.25rem;
 }
 
 .btn-scifi {
@@ -181,3 +184,14 @@ pre {
   padding-bottom: 0.1rem;
   /* color: currentColor; */
 }
+
+
+.input, .textarea, .select, .checkbox, .radio, .file {
+  font-size: 1.4rem;
+}
+
+input::placeholder, textarea::placeholder {
+  opacity: .25;
+  color: #aaaaaa;
+}
+
