@@ -3,6 +3,7 @@ import Counter from "~/components/Counter";
 
 
 import server$ from "solid-start/server"
+import { For } from "solid-js";
 
 const serverGday = server$(async (message: string) => {
     const theMediumIsNotTheMessage = `G'day from SERVER, ${message}`
@@ -19,39 +20,46 @@ const clientGday = (message: string) => {
 }
 
 
+const buttonList = [
+    {
+        "buttonText": "About",
+        "buttonLink": "/about"
+    },
+    {
+        "buttonText": "Stuff",
+        "buttonLink": "/asdf"
+    },
+    {
+        "buttonText": "Overseas Payload Permit",
+        "buttonLink": "/opps"
+    },
+    {
+        "buttonText": "Typography",
+        "buttonLink": "/typography"
+    },
+]
+
+
+
 export default function Home() {
 
     const clientMessage = clientGday('dude')
     const serverMessage = serverGday('sweet')
 
     return (
-        <main class="text-center mx-auto text-gray-700 p-4">
-            <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">
-                Hello world!
-            </h1>
+        <div class="flex flex-col items-center justify-center mx-auto p-4">
 
-            <h2>{clientMessage}</h2>
-            {/* TODO: figure out async in solidjs <h2>{serverMessage ? serverMessage : ''}</h2> */}
+            <h1>SolidJS with Solid Start beta</h1>
 
-            <Counter />
-            <p class="mt-8">
-                Visit{" "}
-                <a
-                    href="https://solidjs.com"
-                    target="_blank"
-                    class="text-sky-600 hover:underline"
-                >
-                    solidjs.com
-                </a>{" "}
-                to learn how to build Solid apps.
-            </p>
-            <p class="my-4">
-                <span>Home</span>
-                {" - "}
-                <A href="/about" class="text-sky-600 hover:underline">
-                    About Page
-                </A>{" "}
-            </p>
-        </main>
-    );
+            <img src={`/moonlogo_small.png`} alt="Blue Dwarf Space logo" class="w-full sm:w-1/3 md:w-2/3" />
+
+            <div class="w-full grid gap-8 grid-cols-2 mt-12 mb-8">
+                <For each={buttonList}>
+                    {(button) => (
+                        <A href={button.buttonLink} class="btn btn-primary bg-opacity-20 uppercase text-xl leading-5">{button.buttonText}</A>
+                    )}
+                </For>
+            </div>
+        </div>
+    )
 }
