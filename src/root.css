@@ -60,7 +60,13 @@ h6 {
 }
 
 a {
-  text-decoration: underline #0d3c72;
+  text-decoration: none;
+  color: #02597f;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0273a5;
 }
 
 .btn {

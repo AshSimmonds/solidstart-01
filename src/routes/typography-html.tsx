@@ -2,9 +2,11 @@
 // import "../styles/typography.module.css"
 // import { TypographyHtmlComponent } from "~/components/Typography"
 
+import { A } from "solid-start";
+
 export default function TypographyHtmlPage() {
 
-    
+
     return (
         <div>
 
@@ -34,19 +36,74 @@ export default function TypographyHtmlPage() {
                 ribeye jerky capicola shank beef ribs landjaeger excepteur.
             </p>
 
-            <h2 class="mt-16 mb-4">Buttons</h2>
-            <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
-                <button class="btn">btn</button>
+            <h2 id="links" class="mt-16 mb-4">Links</h2>
+            <div >
+                Lorem ipsum <A href="#links">standard link</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-neutral">class="link-neutral"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-secondary">class="link-secondary"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-primary">class="link-primary"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-accent">class="link-accent"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-info">class="link-info"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-success">class="link-success"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-warning">class="link-warning"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-error">class="link-error"</A> nah
+            </div>
 
-                <button class="btn btn-primary">btn btn-primary</button>
 
-                <button class="btn btn-secondary">btn btn-secondary</button>
-                <button class="btn btn-accent">btn btn-accent</button>
-                <button class="btn btn-info">btn btn-info</button>
+            <h2 id="buttons" class="mt-16 mb-4">Buttons</h2>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                <button >no class</button>
+                <button class="btn">class="btn"</button>
 
-                <button class="btn btn-success">btn btn-success</button>
-                <button class="btn btn-warning">btn btn-warning</button>
-                <button class="btn btn-error">btn btn-error</button>
+                <button class="btn-primary">class="btn-primary"</button>
+                <button class="btn btn-primary">class="btn btn-primary"</button>
+
+                <button class="btn-secondary">class="btn-secondary"</button>
+                <button class="btn btn-secondary">class="btn btn-secondary"</button>
+
+                <button class="btn-accent">class="btn-accent"</button>
+                <button class="btn btn-accent">class="btn btn-accent"</button>
+
+                <button class="btn-info">class="btn-info"</button>
+                <button class="btn btn-info">class="btn btn-info"</button>
+
+                <button class="btn-success">class="btn-success"</button>
+                <button class="btn btn-success">class="btn btn-success"</button>
+
+                <button class="btn-warning">class="btn-warning"</button>
+                <button class="btn btn-warning">class="btn btn-warning"</button>
+
+                <button class="btn-error">class="btn-error"</button>
+                <button class="btn btn-error">class="btn btn-error"</button>
+            </div>
+
+            <h2 id="links-buttons" class="mt-16 mb-4">Links with btn class (eg. &lta class="btn ..." &gt&lt/a&gt)</h2>
+
+            Leaving the "btn" class off is not really catered for yet.
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                <A href="#links-buttons" class="btn">class="btn"</A>
+
+                <A href="#links-buttons" class="btn-primary">class="btn-primary"</A>
+                <A href="#links-buttons" class="btn btn-primary">class="btn btn-primary"</A>
+
+                <A href="#links-buttons" class="btn-secondary">class="btn-secondary"</A>
+                <A href="#links-buttons" class="btn btn-secondary">class="btn btn-secondary"</A>
+
+                <A href="#links-buttons" class="btn-accent">class="btn-accent"</A>
+                <A href="#links-buttons" class="btn btn-accent">class="btn btn-accent"</A>
+
+                <A href="#links-buttons" class="btn-info">class="btn-info"</A>
+                <A href="#links-buttons" class="btn btn-info">class="btn btn-info"</A>
+
+                <A href="#links-buttons" class="btn-success">class="btn-success"</A>
+                <A href="#links-buttons" class="btn btn-success">class="btn btn-success"</A>
+
+                <A href="#links-buttons" class="btn-warning">class="btn-warning"</A>
+                <A href="#links-buttons" class="btn btn-warning">class="btn btn-warning"</A>
+
+                <A href="#links-buttons" class="btn-error">class="btn-error"</A>
+                <A href="#links-buttons" class="btn btn-error">class="btn btn-error"</A>
             </div>
 
             <h2 class="mt-16 mb-4">Badges</h2>
@@ -66,16 +123,6 @@ export default function TypographyHtmlPage() {
                 <button class="tab tab-lifted">tab tab-lifted</button>
                 <button class="tab tab-lifted tab-active">tab tab-lifted tab-active</button>
                 <button class="tab tab-lifted">tab tab-lifted</button>
-            </div>
-
-            <h2 class="mt-16 mb-4">Links, well - span with link class</h2>
-            <div class="flex flex-col">
-                <span class="link">link</span>
-                <span class="link link-primary">link link-primary</span>
-                <span class="link link-secondary"
-                >link link-secondary</span
-                >
-                <span class="link link-accent">link link-accent</span>
             </div>
 
             <h2 class="mt-16 mb-4">Progress bars</h2>
@@ -311,7 +358,7 @@ export default function TypographyHtmlPage() {
 
 
 
-            
+
             <h2 class="mt-16 mb-4">Text sizes</h2>
             <div class="flex flex-grow flex-col gap-3">
                 <div class="text-4xl">text-4xl</div>
