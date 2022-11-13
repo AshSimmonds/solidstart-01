@@ -23,7 +23,7 @@ export default function Root() {
                 <Meta name="viewport" content="width=device-width, initial-scale=1" />
 
                 <link rel="preconnect" href="https://api.fonts.coollabs.io" />
-                <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&family=Rajdhani:wght@600&family=Orbitron:wght@600&family=Baloo+2&family=Barlow&display=swap" rel="stylesheet"></link>
+                <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&family=Rajdhani:wght@600&family=Orbitron:wght@600&family=VT323&display=swap" rel="stylesheet"></link>
 
             </Head>
             <Body>
