@@ -14,6 +14,58 @@ import {
 } from "solid-start"
 import "./root.css"
 
+import { Show } from 'solid-js'
+import { isServer } from 'solid-js/web'
+import { Auth0, useAuth0 } from '@zentered/auth0-solid-start'
+
+// const GraphQLProvider = () => { } // let's assume you want to authenticate graphql requests with your JWT
+
+function Login(props) {
+    return (
+        <div>
+            <p>Sign in</p>
+            <div>
+                <div>
+                    <a onClick={() => props.auth0.authorize()} type="button" class="btn">
+                        Log In
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+
+function SiteRequiresAuth(props) {
+    const auth0 = useAuth0()
+
+    console.log(`SiteRequiresAuth: auth0: ${auth0}`)
+
+    if (!auth0.isAuthenticated() && !isServer) {
+        auth0.login()
+    }
+
+    return (
+        <>
+            <Show when={auth0.isInitialized()}>
+                <Show when={auth0.isAuthenticated()} fallback={<Login auth0={auth0} />}>
+                    <Show when={auth0.accessToken()}>
+                        {/* <GraphQLProvider auth0={auth0}>{props.children}</GraphQLProvider> */}
+
+                        <h2>zxcv</h2>
+
+                    </Show>
+                </Show>
+            </Show>
+        </>
+    )
+}
+
+
+
+
+
 export default function Root() {
     return (
         <Html lang="en">
@@ -34,9 +86,21 @@ export default function Root() {
 
                         <main class="bg-base-300 mx-0 sm:mx-auto sm:w-full md:w-11/12 lg:w-10/12 xl:w-9/12 p-2 md:p-4 border-2 border-primary border-opacity-20 ">
 
-                            <Routes>
-                                <FileRoutes />
-                            </Routes>
+                            {/* <Auth0
+                                domain={import.meta.env.VITE_AUTH0_DOMAIN}
+                                clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
+                                audience={import.meta.env.VITE_AUTH0_AUDIENCE}
+                                redirectUri={import.meta.env.VITE_AUTH0_REDIRECT_URI}
+                            // organization={organization} // uncomment if you use auth0 organizations
+                            >
+                                <SiteRequiresAuth> */}
+
+                                    <Routes>
+                                        <FileRoutes />
+                                    </Routes>
+
+                                {/* </SiteRequiresAuth>
+                            </Auth0> */}
 
                         </main>
 
