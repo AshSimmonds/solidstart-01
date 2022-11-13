@@ -15,10 +15,9 @@
     "vite": "^3.1.8"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.0",
+    "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.5.0",
     "@tailwindcss/typography": "^0.5.8",
-    "@zentered/auth0-solid-start": "^1.1.0",
     "daisyui": "^2.39.0",
     "solid-js": "^1.6.0",
     "solid-start": "^0.2.0",
