@@ -16,7 +16,7 @@ import "./root.css"
 
 import { Show } from 'solid-js'
 import { isServer } from 'solid-js/web'
-import { Auth0, useAuth0 } from '@zentered/auth0-solid-start'
+// import { Auth0, useAuth0 } from '@zentered/auth0-solid-start'
 
 // const GraphQLProvider = () => { } // let's assume you want to authenticate graphql requests with your JWT
 
@@ -37,30 +37,30 @@ function Login(props) {
 
 
 
-function SiteRequiresAuth(props) {
-    const auth0 = useAuth0()
+// function SiteRequiresAuth(props) {
+//     const auth0 = useAuth0()
 
-    console.log(`SiteRequiresAuth: auth0: ${auth0}`)
+//     console.log(`SiteRequiresAuth: auth0: ${auth0}`)
 
-    if (!auth0.isAuthenticated() && !isServer) {
-        auth0.login()
-    }
+//     if (!auth0.isAuthenticated() && !isServer) {
+//         auth0.login()
+//     }
 
-    return (
-        <>
-            <Show when={auth0.isInitialized()}>
-                <Show when={auth0.isAuthenticated()} fallback={<Login auth0={auth0} />}>
-                    <Show when={auth0.accessToken()}>
-                        {/* <GraphQLProvider auth0={auth0}>{props.children}</GraphQLProvider> */}
+//     return (
+//         <>
+//             <Show when={auth0.isInitialized()}>
+//                 <Show when={auth0.isAuthenticated()} fallback={<Login auth0={auth0} />}>
+//                     <Show when={auth0.accessToken()}>
+//                         {/* <GraphQLProvider auth0={auth0}>{props.children}</GraphQLProvider> */}
 
-                        <h2>zxcv</h2>
+//                         <h2>zxcv</h2>
 
-                    </Show>
-                </Show>
-            </Show>
-        </>
-    )
-}
+//                     </Show>
+//                 </Show>
+//             </Show>
+//         </>
+//     )
+// }
 
 
 
@@ -95,11 +95,11 @@ export default function Root() {
                             >
                                 <SiteRequiresAuth> */}
 
-                                    <Routes>
-                                        <FileRoutes />
-                                    </Routes>
+                            <Routes>
+                                <FileRoutes />
+                            </Routes>
 
-                                {/* </SiteRequiresAuth>
+                            {/* </SiteRequiresAuth>
                             </Auth0> */}
 
                         </main>
