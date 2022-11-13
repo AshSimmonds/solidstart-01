@@ -2,17 +2,20 @@ import { A } from "solid-start";
 
 export default function BlankPage() {
     return (
-        <main class="text-center mx-auto ">
-            <h1 >
-                Empty
-            </h1>
+        <>
+                <h1 >
+                    Empty
+                </h1>
 
-            <h2>Still blank</h2>
+            <div class="text-center mx-auto ">
 
-            <div>
-                nothing to see here
+                <h2>Centered stuff</h2>
+
+                <div>
+                    nothing to see here
+                </div>
+
             </div>
-
-        </main>
-    );
+        </>
+    )
 }
