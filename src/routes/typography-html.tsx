@@ -49,61 +49,51 @@ export default function TypographyHtmlPage() {
                 Lorem ipsum <A href="#links" class="link-error">class="link-error"</A> nah
             </div>
 
+            <h2 id="links-buttons" class="mt-16 mb-4">Buttons</h2>
 
-            <h2 id="buttons" class="mt-16 mb-4">Buttons</h2>
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                <button >no class</button>
-                <button class="btn">class="btn"</button>
-
-                <button class="btn-primary">class="btn-primary"</button>
-                <button class="btn btn-primary">class="btn btn-primary"</button>
-
-                <button class="btn-secondary">class="btn-secondary"</button>
-                <button class="btn btn-secondary">class="btn btn-secondary"</button>
-
-                <button class="btn-accent">class="btn-accent"</button>
-                <button class="btn btn-accent">class="btn btn-accent"</button>
-
-                <button class="btn-info">class="btn-info"</button>
-                <button class="btn btn-info">class="btn btn-info"</button>
-
-                <button class="btn-success">class="btn-success"</button>
-                <button class="btn btn-success">class="btn btn-success"</button>
-
-                <button class="btn-warning">class="btn-warning"</button>
-                <button class="btn btn-warning">class="btn btn-warning"</button>
-
-                <button class="btn-error">class="btn-error"</button>
-                <button class="btn btn-error">class="btn btn-error"</button>
-            </div>
-
-            <h2 id="links-buttons" class="mt-16 mb-4">Links with btn class</h2>
-
-            (eg. &lta class="btn ..." &gt&lt/a&gt)
+            eg. <code>&lta class="btn ..." &gt<span class="text-accent">blah</span>&lt/a&gt</code>
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-4 mt-8">
                 <A href="#links-buttons" class="btn">class="btn"</A>
+                <A href="#links-buttons" class="btn btn-active">class="btn btn-active"</A>
 
-                <A href="#links-buttons" class="btn-primary">class="btn-primary"</A>
                 <A href="#links-buttons" class="btn btn-primary">class="btn btn-primary"</A>
+                <A href="#links-buttons" class="btn btn-primary btn-active">class="btn btn-primary btn-active"</A>
 
-                <A href="#links-buttons" class="btn-secondary">class="btn-secondary"</A>
                 <A href="#links-buttons" class="btn btn-secondary">class="btn btn-secondary"</A>
+                <A href="#links-buttons" class="btn btn-secondary btn-active">class="btn btn-secondary btn-active"</A>
 
-                <A href="#links-buttons" class="btn-accent">class="btn-accent"</A>
                 <A href="#links-buttons" class="btn btn-accent">class="btn btn-accent"</A>
+                <A href="#links-buttons" class="btn btn-accent btn-active">class="btn btn-accent btn-active"</A>
 
-                <A href="#links-buttons" class="btn-info">class="btn-info"</A>
                 <A href="#links-buttons" class="btn btn-info">class="btn btn-info"</A>
-
-                <A href="#links-buttons" class="btn-success">class="btn-success"</A>
                 <A href="#links-buttons" class="btn btn-success">class="btn btn-success"</A>
-
-                <A href="#links-buttons" class="btn-warning">class="btn-warning"</A>
                 <A href="#links-buttons" class="btn btn-warning">class="btn btn-warning"</A>
-
-                <A href="#links-buttons" class="btn-error">class="btn-error"</A>
                 <A href="#links-buttons" class="btn btn-error">class="btn btn-error"</A>
+
+                <A href="#links-buttons" class="btn btn-outline">class="btn btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-primary btn-outline">class="btn btn-primary btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-secondary btn-outline">class="btn btn-secondary btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-accent btn-outline">class="btn btn-accent btn-outline"</A>
+
+                <A href="#links-buttons" class="btn btn-info btn-outline">class="btn btn-info btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-success btn-outline">class="btn btn-success btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-warning btn-outline">class="btn btn-warning btn-outline"</A>
+                <A href="#links-buttons" class="btn btn-error btn-outline">class="btn btn-error btn-outline"</A>
+
+                <A href="#links-buttons" class="btn btn-disabled">class="btn btn-disabled"</A>
+                <A href="#links-buttons" class="btn btn-wide">class="btn btn-wide"</A>
+                <A href="#links-buttons" class="btn btn-square">class="btn btn-square"</A>
+                <A href="#links-buttons" class="btn btn-circle">class="btn btn-circle"</A>
+                <A href="#links-buttons" class="btn btn-ghost">class="btn btn-ghost"</A>
+                <A href="#links-buttons" class="btn btn-xs">class="btn btn-xs"</A>
+                <A href="#links-buttons" class="btn btn-sm">class="btn btn-sm"</A>
+                <A href="#links-buttons" class="btn btn-md">class="btn btn-md"</A>
+                <A href="#links-buttons" class="btn btn-lg">class="btn btn-lg"</A>
+                <A href="#links-buttons" class="btn btn-xl">class="btn btn-xl"</A>
+                <A href="#links-buttons" class="btn btn-2xl">class="btn btn-2xl"</A>
+
+
             </div>
 
             <h2 class="mt-16 mb-4">Badges</h2>

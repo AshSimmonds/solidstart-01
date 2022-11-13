@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 body {
-  background-color: #020013;
+  
+  /* background-color: #020013; */
+  /* background-color: #000a14; */
+  background-color: #15252c;
   /* background-color: #ff0013; */
 
   /* height: 100vh; */
@@ -67,7 +70,7 @@ h6 {
 a {
   text-decoration: none;
   /* color: #02597f; */
-  color: #0a7dae;
+  color: #5f7992;
 }
 
 /* .menu :where(li) > :where(*:not(ul)) { */
@@ -75,11 +78,12 @@ a {
 a:hover {
   text-decoration: none;
   /* color: #0273a5; */
-  color: #91deff;
+  color: #7f99a2;
 }
 
 .btn {
   text-decoration: none;
+  transition-duration: 69ms;
 }
 
 a.btn:hover {
@@ -197,3 +201,8 @@ input::placeholder, textarea::placeholder {
   color: #aaaaaa;
 }
 
+code {
+  background-color: #000000;
+  color: #00ff00;
+  padding: 0.5rem;
+}
