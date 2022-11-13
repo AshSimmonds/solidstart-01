@@ -16,53 +16,6 @@ import "./root.css"
 
 import { Show } from 'solid-js'
 import { isServer } from 'solid-js/web'
-// import { Auth0, useAuth0 } from '@zentered/auth0-solid-start'
-
-// const GraphQLProvider = () => { } // let's assume you want to authenticate graphql requests with your JWT
-
-function Login(props) {
-    return (
-        <div>
-            <p>Sign in</p>
-            <div>
-                <div>
-                    <a onClick={() => props.auth0.authorize()} type="button" class="btn">
-                        Log In
-                    </a>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-
-
-// function SiteRequiresAuth(props) {
-//     const auth0 = useAuth0()
-
-//     console.log(`SiteRequiresAuth: auth0: ${auth0}`)
-
-//     if (!auth0.isAuthenticated() && !isServer) {
-//         auth0.login()
-//     }
-
-//     return (
-//         <>
-//             <Show when={auth0.isInitialized()}>
-//                 <Show when={auth0.isAuthenticated()} fallback={<Login auth0={auth0} />}>
-//                     <Show when={auth0.accessToken()}>
-//                         {/* <GraphQLProvider auth0={auth0}>{props.children}</GraphQLProvider> */}
-
-//                         <h2>zxcv</h2>
-
-//                     </Show>
-//                 </Show>
-//             </Show>
-//         </>
-//     )
-// }
-
-
 
 
 
@@ -70,9 +23,35 @@ export default function Root() {
     return (
         <Html lang="en">
             <Head>
-                <Title>SolidStart - With TailwindCSS</Title>
+                <Title>SolidStart beta</Title>
                 <Meta charset="utf-8" />
                 <Meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                <Meta
+                    name="twitter:image:src"
+                    content="https://bluedwarf.space/assets/moon_logo.svg"
+                />
+                <Meta name="twitter:site" content="@BlueDwarfSpace" />
+                <Meta name="twitter:card" content="summary_large_image" />
+                <Meta
+                    name="twitter:title"
+                    content="Blue Dwarf Space Recombobulator - SolidJS SolidStart beta test"
+                />
+                <Meta
+                    name="twitter:description"
+                    content="Making space reachable to all by fundamentally changing industry processes to create a frictionless path by navigating the red tape, while supporting a truly sustainable space sector."
+                />
+                <Meta
+                    property="og:image"
+                    content="https://bluedwarf.space/assets/moon_logo.svg"
+                />
+                <Meta
+                    property="og:image:alt"
+                    content="Making space reachable to all by fundamentally changing industry processes to create a frictionless path by navigating the red tape, while supporting a truly sustainable space sector."
+                />
+                <Meta property="og:image:width" content="1200" />
+                <Meta property="og:image:height" content="600" />
+                <Meta property="og:site_name" content="BlueDwarf" />
 
                 <link rel="preconnect" href="https://api.fonts.coollabs.io" />
                 <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&family=Rajdhani:wght@600&family=Orbitron:wght@600&family=VT323&display=swap" rel="stylesheet"></link>
@@ -213,3 +192,66 @@ function FooterBar() {
         </footer>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Auth0, useAuth0 } from '@zentered/auth0-solid-start'
+
+// const GraphQLProvider = () => { } // let's assume you want to authenticate graphql requests with your JWT
+
+function Login(props) {
+    return (
+        <div>
+            <p>Sign in</p>
+            <div>
+                <div>
+                    <a onClick={() => props.auth0.authorize()} type="button" class="btn">
+                        Log In
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+
+// function SiteRequiresAuth(props) {
+//     const auth0 = useAuth0()
+
+//     console.log(`SiteRequiresAuth: auth0: ${auth0}`)
+
+//     if (!auth0.isAuthenticated() && !isServer) {
+//         auth0.login()
+//     }
+
+//     return (
+//         <>
+//             <Show when={auth0.isInitialized()}>
+//                 <Show when={auth0.isAuthenticated()} fallback={<Login auth0={auth0} />}>
+//                     <Show when={auth0.accessToken()}>
+//                         {/* <GraphQLProvider auth0={auth0}>{props.children}</GraphQLProvider> */}
+
+//                         <h2>zxcv</h2>
+
+//                     </Show>
+//                 </Show>
+//             </Show>
+//         </>
+//     )
+// }
+

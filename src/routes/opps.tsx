@@ -35,6 +35,7 @@ export function routeData() {
 
 import { A } from "solid-start"
 import { For } from "solid-js"
+import PageTitle from "~/components/PageTitle"
 
 
 export default function OverseasPayloadPermitListPage() {
@@ -47,9 +48,8 @@ export default function OverseasPayloadPermitListPage() {
 
     return (
         <main class="prose mx-0 sm:mx-auto sm:w-full md:w-11/12 lg:w-10/12 xl:w-9/12 sm:p-0 md:p-4 border-0 bg-base-200 shadow-xl">
-            <h1 >
-                Overseas Payload Permit Applications
-            </h1>
+            <PageTitle>Overseas Payload Permit Applications</PageTitle>
+            <h1>Overseas Payload Permit Applications</h1>
 
             <For each={allPermitsObject()?.overseasPayloadPermits.records}>
                 {(permit: any) => (

@@ -1,11 +1,10 @@
-import { A } from "solid-start";
+import PageTitle from "~/components/PageTitle";
 
 export default function BlankPage() {
     return (
         <>
-            <h1 >
-                Empty
-            </h1>
+            <PageTitle>Blank</PageTitle>
+            <h1>Empty</h1>
 
             <div class="text-center mx-auto ">
 

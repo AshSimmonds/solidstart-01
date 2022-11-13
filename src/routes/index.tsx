@@ -4,6 +4,7 @@ import Counter from "~/components/Counter";
 
 import server$ from "solid-start/server"
 import { For } from "solid-js";
+import PageTitle from "~/components/PageTitle";
 
 const serverGday = server$(async (message: string) => {
     const theMediumIsNotTheMessage = `G'day from SERVER, ${message}`
@@ -83,7 +84,8 @@ export default function Home() {
     return (
         <div class="flex flex-col items-center justify-center mx-auto p-4">
 
-            <h1>SolidJS with Solid Start beta</h1>
+            <PageTitle>SolidJS with Solid Start beta</PageTitle>
+            <h1>SolidJS with <a href="https://start.solidjs.com">Solid Start</a> beta</h1>
 
             <div class="bg-base-100 p-12">
                 <img src={`/moonlogo_small.png`} alt="Blue Dwarf Space logo" class="mx-auto w-full sm:w-1/3 md:w-2/3" />

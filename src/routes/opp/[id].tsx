@@ -3,6 +3,7 @@ import { A, createRouteData, RouteDataArgs, useRouteData } from "solid-start"
 import { serverGetPermits } from "../../api/permits"
 
 import { useParams } from "solid-start"
+import PageTitle from "~/components/PageTitle"
 
 
 
@@ -55,6 +56,7 @@ export default function OverseasPayloadPermitDetailPage() {
 
     return (
         <main class="text-center mx-auto ">
+            <PageTitle>{thePermitFunction()?.overseasPayloadPermits.records[0].fields.title}</PageTitle>
             <h1>{thePermitFunction()?.overseasPayloadPermits.records[0].fields.title}</h1>
 
             <p>

@@ -1,9 +1,12 @@
 // TODO: figure out if css can be embedded in the page itself, this is only 1 line which applies only on typography example pages
 // import "../styles/typography.module.css"
 
+import PageTitle from "~/components/PageTitle"
+
 export default function TypographyHtmlPage() {
     return (
         <div>
+            <PageTitle>Typography TailwindCSS</PageTitle>
 
             <p class="alert alert-warning" >
                 This page is way outdated, it's mostly just good for previewing colour schemes. TODO: merge with the other typography page.

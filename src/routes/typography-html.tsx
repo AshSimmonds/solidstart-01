@@ -1,11 +1,12 @@
 import { A } from "solid-start";
+import PageTitle from "~/components/PageTitle";
 
 import { H2Tall } from "~/styles/H2-tall"
 
 export default function TypographyHtmlPage() {
     return (
         <H2Tall>
-
+            <PageTitle>Typography</PageTitle>
             <h1>Typography</h1>
 
             <h2>Paragraphs</h2>

@@ -1,8 +1,9 @@
-import { A } from "solid-start";
+import PageTitle from "~/components/PageTitle"
 
 export default function TypographyHtmlPage() {
   return (
     <div>
+      <PageTitle>Typography Markdown</PageTitle>
       <p class="alert alert-warning">TODO: install some markdown parser</p>
 
 

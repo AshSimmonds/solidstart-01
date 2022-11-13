@@ -1,8 +1,10 @@
 import { A } from "solid-start";
+import PageTitle from "~/components/PageTitle";
 
 export default function TypographyIndexPage() {
     return (
         <div>
+            <PageTitle>Typography and styling resources</PageTitle>
             <h1>Typography and styling resources</h1>
 
             <div class="btn-group">

@@ -1,12 +1,12 @@
 import { A } from "solid-start";
 import Counter from "~/components/Counter";
+import PageTitle from "~/components/PageTitle";
 
 export default function About() {
     return (
         <div>
-            <h1>
-                About
-            </h1>
+            <PageTitle>About</PageTitle>
+            <h1>About</h1>
 
             <a href="https://twitter.com/BlueDwarfAsh" >@BlueDwarfAsh</a> | <a href="https://github.com/AshSimmonds/solidstart-01">GitHub repo</a><br />
             <br />
