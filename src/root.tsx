@@ -102,7 +102,7 @@ function NavbarMiddle() {
 function NavbarEnd() {
     return (
         <div class="navbar-end">
-            <A href="/profile" class="btn btn-circle btn-accent">Profile</A>
+            <A href="/profile" class="btn btn-circle btn-accent">?</A>
             {/* {!isLoading && user?.picture ? (<Link href="/profile" class="btn btn-circle border-1 border-neutral-content"><img src={user.picture} class="w-full rounded-full" alt='avatar' /></Link>) : (<Link href="/api/auth/login" class="btn btn-circle btn-accent">Login</Link>)} */}
         </div>
     )
