@@ -23,7 +23,7 @@ export default function Root() {
                 <Meta name="viewport" content="width=device-width, initial-scale=1" />
 
                 <link rel="preconnect" href="https://api.fonts.coollabs.io" />
-                <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&family=Rajdhani:wght@600&display=swap" rel="stylesheet"></link>
+                <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&family=Rajdhani:wght@600&family=Orbitron:wght@600&family=Baloo+2&family=Barlow&display=swap" rel="stylesheet"></link>
 
             </Head>
             <Body>
@@ -32,7 +32,7 @@ export default function Root() {
 
                         <HeaderBar />
 
-                        <main class="p-4">
+                        <main class="bg-base-300 mx-0 sm:mx-auto sm:w-full md:w-11/12 lg:w-10/12 xl:w-9/12 p-2 md:p-4 border-2 border-primary border-opacity-20 ">
 
                             <Routes>
                                 <FileRoutes />
@@ -55,7 +55,7 @@ export default function Root() {
 
 function HeaderBar() {
     return (
-        <div class="navbar bg-transparent mb-4">
+        <div class="navbar bg-base-100 mb-4">
             <NavbarStart />
 
             <NavbarMiddle />
@@ -141,7 +141,7 @@ function HeaderLinks(props) {
 function FooterBar() {
     return (
         <footer class="footer footer-center p-4 mt-24 text-base-content
-        bg-transparent flex justify-between">
+        bg-base-100 flex justify-between">
             <A href={"/"}><img src="/blue_dwarf_space_notext_logo_small.png" alt="Blue Dwarf Space logo"
                 class="w-8 justify-self-start" /></A>
 

@@ -23,26 +23,26 @@ module.exports = {
       {
         ashdark: {
 
-          'primary': '#226740',
-          'primary-focus': '#53c361',
+          'primary': '#53a1b3',
+          'primary-focus': '#73d1e3',
           'primary-content': '#eeeeff',
 
-          'secondary': '#3b0677',
-          'secondary-focus': '#6009c3',
+          'secondary': '#228740',
+          'secondary-focus': '#53f361',
           'secondary-content': '#eeeeff',
 
-          'accent': '#ffc347',
-          'accent-focus': '#ffc347',
+          'accent': '#6009b3',
+          'accent-focus': '#9009e3',
           'accent-content': '#eeeeff',
 
           'neutral': '#5f7992',
           'neutral-focus': '#7f99a2',
-          'neutral-content': '#eeeeff',
+          'neutral-content': '#77a1b3',
 
           'base-100': '#000b16',
           'base-200': '#000f1e',
-          'base-300': '#000f3e',
-          'base-content': '#eeeeff',
+          'base-300': '#15252c',
+          'base-content': '#53a1b3',
 
           'info': '#0260c7',
           'success': '#87cf0a',

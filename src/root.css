@@ -5,8 +5,8 @@
 body {
   
   /* background-color: #020013; */
-  /* background-color: #000a14; */
-  background-color: #15252c;
+  background-color: #000a14;
+  /* background-color: #15252c; */
   /* background-color: #ff0013; */
 
   /* height: 100vh; */
@@ -64,13 +64,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Orbitron", sans-serif;
+  color: #73e5ff;
 }
 
-a {
+a, .prose a {
   text-decoration: none;
   /* color: #02597f; */
-  color: #5f7992;
+  color: #7fbbe2;
 }
 
 /* .menu :where(li) > :where(*:not(ul)) { */
@@ -78,12 +80,18 @@ a {
 a:hover {
   text-decoration: none;
   /* color: #0273a5; */
-  color: #7f99a2;
+  color: #7fffff;
 }
 
 .btn {
   text-decoration: none;
   transition-duration: 69ms;
+  color: #000000;
+  font-family: 'VT323', monospace;
+}
+
+.btn-outline {
+  color: #7fbbe2;
 }
 
 a.btn:hover {
@@ -205,4 +213,8 @@ code {
   background-color: #000000;
   color: #00ff00;
   padding: 0.5rem;
+}
+
+.translucent {
+  color: #73e5ff;
 }

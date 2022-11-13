@@ -40,8 +40,8 @@ export default function TypographyHtmlPage() {
             <div >
                 Lorem ipsum <A href="#links">standard link</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-neutral">class="link-neutral"</A> yeah<br />
-                Lorem ipsum <A href="#links" class="link-secondary">class="link-secondary"</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-primary">class="link-primary"</A> yeah<br />
+                Lorem ipsum <A href="#links" class="link-secondary">class="link-secondary"</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-accent">class="link-accent"</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-info">class="link-info"</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-success">class="link-success"</A> yeah<br />
