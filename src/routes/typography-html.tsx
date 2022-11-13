@@ -1,30 +1,10 @@
 import { A } from "solid-start";
 
-import { H2Green } from "../components/H2-green"
-
 export default function TypographyHtmlPage() {
     return (
         <div>
 
             <h1>Typography</h1>
-
-            <h2>nope</h2>
-            <h2>nope 2</h2>
-
-            <H2Green>
-                <h2>yep</h2>
-            </H2Green>
-
-            <h2>nope</h2>
-
-            <H2Green>
-                <h2>yep</h2>
-                <h2>yep 2</h2>
-            </H2Green>
-
-            <h2>nope</h2>
-
-            
 
             <h2>Paragraphs</h2>
             <p>
