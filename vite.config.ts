@@ -6,4 +6,7 @@ export default defineConfig({
     plugins: [
         solid({ adapter: vercel() })
     ],
+    define: {
+        'process.env': process.env
+    },
 });
