@@ -1,8 +1,10 @@
 import { A } from "solid-start";
 
+import { H2Tall } from "~/styles/H2-tall"
+
 export default function TypographyHtmlPage() {
     return (
-        <div>
+        <H2Tall>
 
             <h1>Typography</h1>
 
@@ -28,7 +30,7 @@ export default function TypographyHtmlPage() {
                 ribeye jerky capicola shank beef ribs landjaeger excepteur.
             </p>
 
-            <h2 id="links" class="mt-16 mb-4">Links</h2>
+            <h2 id="links" >Links</h2>
             <div >
                 Lorem ipsum <A href="#links">standard link</A> yeah<br />
                 Lorem ipsum <A href="#links" class="link-neutral">class="link-neutral"</A> yeah<br />
@@ -41,7 +43,7 @@ export default function TypographyHtmlPage() {
                 Lorem ipsum <A href="#links" class="link-error">class="link-error"</A> nah
             </div>
 
-            <h2 id="links-buttons" class="mt-16 mb-4">Buttons</h2>
+            <h2 id="links-buttons" >Buttons</h2>
 
             eg. <code>&lta class="btn ..." &gt<span class="text-accent">blah</span>&lt/a&gt</code>
 
@@ -949,6 +951,6 @@ export default function TypographyHtmlPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </H2Tall>
     )
 }
